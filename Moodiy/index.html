@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Moodiy - Home</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="scripts.js" defer></script>
+	</head>
+	<body>
+		<div class="centerDiv">
+			<form>
+				<div id="numberPick">
+					<h1>Wie ist deine Stimmung von 1-10?</h1>
+					<label for="radioNumberPick-1">1</label>
+					<input type="radio" id="radioNumberPick-1" name="moodNumber" class="radioPick" value="1" />
+					<label for="radioNumberPick-2">2</label>
+					<input type="radio" id="radioNumberPick-2" name="moodNumber" class="radioPick" value="2" />
+					<label for="radioNumberPick-3">3</label>
+					<input type="radio" id="radioNumberPick-3" name="moodNumber" class="radioPick" value="3" />
+					<label for="radioNumberPick-4">4</label>
+					<input type="radio" id="radioNumberPick-4" name="moodNumber" class="radioPick" value="4" />
+					<label for="radioNumberPick-5">5</label>
+					<input type="radio" id="radioNumberPick-5" name="moodNumber" class="radioPick" value="5" />
+					<label for="radioNumberPick-6">6</label>
+					<input type="radio" id="radioNumberPick-6" name="moodNumber" class="radioPick" value="6" />
+					<label for="radioNumberPick-7">7</label>
+					<input type="radio" id="radioNumberPick-7" name="moodNumber" class="radioPick" value="7" />
+					<label for="radioNumberPick-8">8</label>
+					<input type="radio" id="radioNumberPick-8" name="moodNumber" class="radioPick" value="8" />
+					<label for="radioNumberPick-9">9</label>
+					<input type="radio" id="radioNumberPick-9" name="moodNumber" class="radioPick" value="9" />
+					<label for="radioNumberPick-10">10</label>
+					<input type="radio" id="radioNumberPick-10" name="moodNumber" class="radioPick" value="10" />
+				</div>
+				<div id="colorPick">
+					<h1>Welche Farbe beschreibt deine Gefühle am besten?</h1>
+					<label for="radioColorPick-7">
+						<img
+							src="Images/color-green.png"
+							alt="Grüne Farbe"
+							style="height: 28px; vertical-align: middle"
+						/>
+					</label>
+					<input type="radio" id="radioColorPick-7" name="moodColor" class="radioPick" value="green" />
+					<label for="radioColorPick-5">
+						<img
+							src="Images/color-yellow.png"
+							alt="Gelbe Farbe"
+							style="height: 28px; vertical-align: middle"
+						/>
+					</label>
+					<input type="radio" id="radioColorPick-5" name="moodColor" class="radioPick" value="yellow" />
+					<label for="radioColorPick-1">
+						<img src="Images/color-red.png" alt="Rote Farbe" style="height: 28px; vertical-align: middle" />
+					</label>
+					<input type="radio" id="radioColorPick-1" name="moodColor" class="radioPick" value="red" />
+					<label for="radioColorPick-4">
+						<img
+							src="Images/color-pink.png"
+							alt="Rosa Farbe"
+							style="height: 28px; vertical-align: middle"
+						/>
+					</label>
+					<input type="radio" id="radioColorPick-4" name="moodColor" class="radioPick" value="pink" />
+					<label for="radioColorPick-6">
+						<img
+							src="Images/color-violet.png"
+							alt="Violette Farbe"
+							style="height: 28px; vertical-align: middle"
+						/>
+					</label>
+					<input type="radio" id="radioColorPick-6" name="moodColor" class="radioPick" value="lightgreen" />
+					<label for="radioColorPick-2">
+						<img
+							src="Images/color-blue.png"
+							alt="Blaue Farbe"
+							style="height: 28px; vertical-align: middle"
+						/>
+					</label>
+					<input type="radio" id="radioColorPick-2" name="moodColor" class="radioPick" value="blue" />
+					<label for="radioColorPick-9">
+						<img
+							src="Images/color-gray.png"
+							alt="Graue Farbe"
+							style="height: 28px; vertical-align: middle"
+						/>
+					</label>
+					<input type="radio" id="radioColorPick-9" name="moodColor" class="radioPick" value="white" />
+					<label for="radioColorPick-10">
+						<img
+							src="Images/color-black.png"
+							alt="Schwarze Farbe"
+							style="height: 28px; vertical-align: middle"
+						/>
+					</label>
+					<input type="radio" id="radioColorPick-10" name="moodColor" class="radioPick" value="black" />
+				</div>
+				<div id="textSelecter">
+					<h1>Welcher Text entspricht am meistem deinen Gefühlen?</h1>
+					<select>
+						<option value="1">Ich fühle mich großartig!</option>
+						<option value="2">Ich bin motiviert!</option>
+						<option value="3">Ich bin zufrieden.</option>
+						<option value="4">Mir geht es okay.</option>
+						<option value="5">Ich bin etwas traurig.</option>
+						<option value="6">Ich fühle mich schlecht.</option>
+						<option value="7">Ich bin sehr traurig.</option>
+						<option value="8">Ich fühle mich verzweifelt.</option>
+						<option value="9">Der Tag ist sehr schwer.</option>
+					</select>
+				</div>
+				<div id="shortDiary">
+					<label for="shortDiary-feeling" id="sD-feeling-label">Heute fühle ich mich:</label>
+					<textarea
+						name="shortDiary-feeling"
+						id="sD-feeling"
+						placeholder="Heute fühle ich mich..."
+					></textarea>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
