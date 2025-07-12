@@ -3,122 +3,71 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Moodiy - Home</title>
 		<link rel="stylesheet" href="styles.css" />
 		<script src="scripts.js" defer></script>
+		<title>Moodiy | Home</title>
+		<link rel="icon" href="images/logo_round.png" type="image/png" />
 	</head>
 	<body>
-		<div class="centerDiv">
-			<form>
-				<div id="numberPick">
-					<h1>Wie ist deine Stimmung von 1-10?</h1>
-					<label for="radioNumberPick-1">1</label>
-					<input type="radio" id="radioNumberPick-1" name="moodNumber" class="radioPick" value="1" />
-					<label for="radioNumberPick-2">2</label>
-					<input type="radio" id="radioNumberPick-2" name="moodNumber" class="radioPick" value="2" />
-					<label for="radioNumberPick-3">3</label>
-					<input type="radio" id="radioNumberPick-3" name="moodNumber" class="radioPick" value="3" />
-					<label for="radioNumberPick-4">4</label>
-					<input type="radio" id="radioNumberPick-4" name="moodNumber" class="radioPick" value="4" />
-					<label for="radioNumberPick-5">5</label>
-					<input type="radio" id="radioNumberPick-5" name="moodNumber" class="radioPick" value="5" />
-					<label for="radioNumberPick-6">6</label>
-					<input type="radio" id="radioNumberPick-6" name="moodNumber" class="radioPick" value="6" />
-					<label for="radioNumberPick-7">7</label>
-					<input type="radio" id="radioNumberPick-7" name="moodNumber" class="radioPick" value="7" />
-					<label for="radioNumberPick-8">8</label>
-					<input type="radio" id="radioNumberPick-8" name="moodNumber" class="radioPick" value="8" />
-					<label for="radioNumberPick-9">9</label>
-					<input type="radio" id="radioNumberPick-9" name="moodNumber" class="radioPick" value="9" />
-					<label for="radioNumberPick-10">10</label>
-					<input type="radio" id="radioNumberPick-10" name="moodNumber" class="radioPick" value="10" />
-				</div>
-				<div id="colorPick">
-					<h1>Welche Farbe beschreibt deine Gefühle am besten?</h1>
-					<label for="radioColorPick-7">
-						<img
-							src="Images/color-green.png"
-							alt="Grüne Farbe"
-							style="height: 28px; vertical-align: middle"
-						/>
-					</label>
-					<input type="radio" id="radioColorPick-7" name="moodColor" class="radioPick" value="green" />
-					<label for="radioColorPick-5">
-						<img
-							src="Images/color-yellow.png"
-							alt="Gelbe Farbe"
-							style="height: 28px; vertical-align: middle"
-						/>
-					</label>
-					<input type="radio" id="radioColorPick-5" name="moodColor" class="radioPick" value="yellow" />
-					<label for="radioColorPick-1">
-						<img src="Images/color-red.png" alt="Rote Farbe" style="height: 28px; vertical-align: middle" />
-					</label>
-					<input type="radio" id="radioColorPick-1" name="moodColor" class="radioPick" value="red" />
-					<label for="radioColorPick-4">
-						<img
-							src="Images/color-pink.png"
-							alt="Rosa Farbe"
-							style="height: 28px; vertical-align: middle"
-						/>
-					</label>
-					<input type="radio" id="radioColorPick-4" name="moodColor" class="radioPick" value="pink" />
-					<label for="radioColorPick-6">
-						<img
-							src="Images/color-violet.png"
-							alt="Violette Farbe"
-							style="height: 28px; vertical-align: middle"
-						/>
-					</label>
-					<input type="radio" id="radioColorPick-6" name="moodColor" class="radioPick" value="lightgreen" />
-					<label for="radioColorPick-2">
-						<img
-							src="Images/color-blue.png"
-							alt="Blaue Farbe"
-							style="height: 28px; vertical-align: middle"
-						/>
-					</label>
-					<input type="radio" id="radioColorPick-2" name="moodColor" class="radioPick" value="blue" />
-					<label for="radioColorPick-9">
-						<img
-							src="Images/color-gray.png"
-							alt="Graue Farbe"
-							style="height: 28px; vertical-align: middle"
-						/>
-					</label>
-					<input type="radio" id="radioColorPick-9" name="moodColor" class="radioPick" value="white" />
-					<label for="radioColorPick-10">
-						<img
-							src="Images/color-black.png"
-							alt="Schwarze Farbe"
-							style="height: 28px; vertical-align: middle"
-						/>
-					</label>
-					<input type="radio" id="radioColorPick-10" name="moodColor" class="radioPick" value="black" />
-				</div>
-				<div id="textSelecter">
-					<h1>Welcher Text entspricht am meistem deinen Gefühlen?</h1>
-					<select>
-						<option value="1">Ich fühle mich großartig!</option>
-						<option value="2">Ich bin motiviert!</option>
-						<option value="3">Ich bin zufrieden.</option>
-						<option value="4">Mir geht es okay.</option>
-						<option value="5">Ich bin etwas traurig.</option>
-						<option value="6">Ich fühle mich schlecht.</option>
-						<option value="7">Ich bin sehr traurig.</option>
-						<option value="8">Ich fühle mich verzweifelt.</option>
-						<option value="9">Der Tag ist sehr schwer.</option>
-					</select>
-				</div>
-				<div id="shortDiary">
-					<label for="shortDiary-feeling" id="sD-feeling-label">Heute fühle ich mich:</label>
-					<textarea
-						name="shortDiary-feeling"
-						id="sD-feeling"
-						placeholder="Heute fühle ich mich..."
-					></textarea>
-				</div>
-			</form>
+		<header>
+			<a href="index.html"><img src="images/logo_round.png" alt="" height="120px" id="logoHeader" /></a>
+		</header>
+		<main id="mainHome">
+			<div id="mainHomeDiv">
+				<h1>🌙 Willkommen bei Moodiy – Dein digitales Stimmungstagebuch</h1>
+				<h2>Schreibe deine Gefühle, Emotionen und Gedanken auf</h2>
+				<p id="paragraphMain">
+					Hast du dich schon einmal gefragt, wie es dir in den letzten Tagen oder Wochen wirklich ging? Moodiy
+					ist eine Website, mit der du deine Gefühle und Gedanken ganz einfach festhalten kannst – jeden Tag,
+					in wenigen Sekunden. Ob du dich glücklich, traurig, gestresst oder gelassen fühlst: Auf Moodiy
+					kannst du deine Emotionen mit Farben, Zahlen oder kurzen Notizen beschreiben. So entsteht im Laufe
+					der Zeit ein persönlicher Überblick über deine Stimmung – ganz ohne Druck. Moodiy richtet sich an
+					alle, die bewusster mit ihren Gefühlen umgehen möchten – egal, ob du einfach neugierig bist oder dir
+					etwas Gutes tun willst. Du entscheidest selbst, wie du die Seite nutzt: täglich, ab und zu oder nur
+					in besonderen Momenten. Schau zurück, erkenne Muster und nimm dir bewusst Zeit für dich. Moodiy –
+					weil deine Gefühle zählen.
+				</p>
+			</div>
+		</main>
+		<div id="wrapperContainerInfo">
+			<div class="infoSheet">
+				<h2>🧭 Warum Moodiy?</h2>
+				<p>
+					Manchmal gehen Tage spurlos an uns vorbei – andere wiederum hinterlassen ein starkes Gefühl, das wir
+					kaum in Worte fassen können. Moodiy hilft dir dabei, diese Momente festzuhalten. Wer regelmäßig
+					aufschreibt, wie es ihm geht, erkennt mit der Zeit Muster, Veränderungen und Auslöser. Du lernst
+					dich selbst besser kennen – ganz ohne Druck, einfach nur für dich.
+				</p>
+			</div>
+			<div class="infoSheet">
+				<h2>✨ So funktioniert's</h2>
+				<p>
+					Moodiy ist bewusst einfach gehalten – damit du dich voll auf dich konzentrieren kannst. <br />
+					So funktioniert’s: <br />
+					1. Stimmung auswählen: Wie fühlst du dich heute? Wähle eine passende Farbe oder Zahl. <br />
+					2. Gedanken eintragen (optional): Du kannst zusätzlich ein paar Sätze schreiben – oder auch nur ein
+					Wort. <br />
+					3. Zurückblicken: Sieh dir an, wie sich deine Stimmung über die Zeit verändert hat – Tag für Tag.
+				</p>
+			</div>
+			<div class="infoSheet">
+				<h2>🌱 Moodiy-Tipps für den Alltag</h2>
+				<p>
+					<ul>
+						<li>Schreibe nicht nur an schlechten Tagen – auch gute Momente verdienen Aufmerksamkeit.</li>
+						<li>Nutze Farben so, wie sie sich für dich richtig anfühlen. Es gibt kein Richtig oder Falsch.</li>
+						<li>Es muss kein langer Text sein. Ein kurzer Satz oder eine Zahl reicht vollkommen.</li>
+						<li>Wenn du mal keine Worte findest: Lass es leer. Moodiy ist für dich – nicht gegen dich.</li>
+					</ul>
+				</p>
+			</div>
+			<div class="infoSheet">
+				<h2>💬 Ein Zitat für dich</h2>
+				<p id="quoteOfTheDayParagraph">„<span id="quoteOfTheDay">Gefühle wollen nicht bewertet, sondern verstanden werden.</span>“ - <span id="quoteOfTheDayAuthor">Unbekannt</span></p>
+			</div>
 		</div>
+		<footer>
+			<a href=""></a>
+		</footer>
 	</body>
 </html>
