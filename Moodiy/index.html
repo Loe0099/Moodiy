@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,10 +10,17 @@
 	</head>
 	<body>
 		<header>
-			<a href="index.html"><img src="images/logo_round.png" alt="" height="120px" id="logoHeader" /></a>
+			<a href="index.html"><img src="images/logo_round.png" alt="Logo Moodiy" height="120px" id="logoHeader" /></a>
 		</header>
-		<main id="mainHome">
-			<div id="mainHomeDiv">
+		<nav>
+			<div id="toggleArea">☰ Menü</div>
+			<div id="menu">
+				<p class="menuPoint"><a href="rate.html" class="linkDesign">Eintragen</a></p>
+				<p class="menuPoint"><a href="" class="linkDesign">Übersicht</a></p>
+			</div>
+		</nav>
+		<main id="mainHome" >
+			<div id="mainHomeDiv" >
 				<h1>🌙 Willkommen bei Moodiy – Dein digitales Stimmungstagebuch</h1>
 				<h2>Schreibe deine Gefühle, Emotionen und Gedanken auf</h2>
 				<p id="paragraphMain">
@@ -53,7 +60,7 @@
 			<div class="infoSheet">
 				<h2>🌱 Moodiy-Tipps für den Alltag</h2>
 				<p>
-					<ul>
+					<ul id="infoSheetTips">
 						<li>Schreibe nicht nur an schlechten Tagen – auch gute Momente verdienen Aufmerksamkeit.</li>
 						<li>Nutze Farben so, wie sie sich für dich richtig anfühlen. Es gibt kein Richtig oder Falsch.</li>
 						<li>Es muss kein langer Text sein. Ein kurzer Satz oder eine Zahl reicht vollkommen.</li>
@@ -63,11 +70,11 @@
 			</div>
 			<div class="infoSheet">
 				<h2>💬 Ein Zitat für dich</h2>
-				<p id="quoteOfTheDayParagraph">„<span id="quoteOfTheDay">Gefühle wollen nicht bewertet, sondern verstanden werden.</span>“ - <span id="quoteOfTheDayAuthor">Unbekannt</span></p>
+				<p id="quoteOfTheDayParagraph"><span id="quoteOfTheDay"></span><span id="quoteOfTheDayAuthor"></span></p>
 			</div>
 		</div>
 		<footer>
-			<a href=""></a>
+			<a href="imprint.html" class="linkDesign" id="linkDesignImprint">Impressum</a>
 		</footer>
 	</body>
 </html>
