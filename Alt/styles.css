@@ -1,0 +1,298 @@
+html {
+	scrollbar-gutter: stable;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: rgb(51, 51, 51);
+	color: rgb(255, 255, 255);
+	font-family: Cambria;
+}
+
+header {
+	position: fixed;
+}
+
+#logoHeader {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+nav {
+	position: fixed;
+	width: 80%;
+	margin-left: 10%;
+	display: flex;
+	justify-content: end;
+	height: 25px;
+}
+
+
+#toggleArea {
+	cursor: pointer;
+	position: fixed;
+	font-size: 25px;
+}
+
+#menu {
+	position: relative;
+	top: 45px;
+	opacity: 0;
+	transform: translateY(20px);
+	pointer-events: none;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	background-color: rgba(73, 73, 73, 0.61);
+	height: fit-content;
+	padding: 2px 10px;
+	border-radius: 8px;
+}
+
+#menu.visible {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+.menuPoint {
+	font-size: 14px;
+}
+
+.linkDesign {
+	color: #fff;
+	text-decoration: none;
+	position: relative;
+}
+
+.linkDesign::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.3s ease;
+}
+
+.linkDesign:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+footer {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#linkDesignImprint {
+	font-size: 18px;
+}
+
+
+/* - Home - */
+
+#mainHome,
+#mainRate {
+	display: flex;
+	justify-content: center;
+}
+
+#mainHomeDiv,
+#mainRateDiv {
+	width: 60%;
+	margin-top: 10px;
+}
+
+p {
+	font-family: Arial;
+}
+
+#paragraphMain {
+	margin-top: 25px;
+	font-size: 16.5px;
+}
+
+#wrapperContainerInfo {
+	margin-top: 5%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.infoSheet {
+	width: 40%;
+	margin-bottom: 2%;
+}
+
+#infoSheetTips {
+	margin-left: -25px;
+	font-family: Arial;
+}
+
+#quoteOfTheDayParagraph {
+	font-style: italic;
+}
+
+#quoteOfTheDayAuthor {
+	font-style: normal;
+}
+
+#quoteOfTheDay::before {
+	content: "„";
+}
+
+#quoteOfTheDay::after {
+	content: "“ – ";
+}
+
+/* Eintrag */
+
+.mainRateDivFormular {
+	justify-items: center;
+	margin-top: 4%;
+}
+
+#mainRateInfo {
+	font-size: 17px;
+}
+
+.wrapperContainerRate {
+	display: flex;
+	flex-direction: row;
+	gap: 50px;
+	margin-top: 2%;
+	margin-bottom: 50px;
+}
+
+.colorContainer {
+	position: relative;
+}
+
+.colorPickDiv {
+	height: 22px;
+	width: 22px;
+	border-radius: 100%;
+	position: absolute;
+	left: 115%;
+	bottom: 0;
+}
+
+#colorDivPink {
+	background-color: rgb(234, 71, 123);
+}
+
+#colorDivViolet {
+	background-color: rgb(186, 35, 189);
+}
+
+#colorDivYellow {
+	background-color: rgb(255, 202, 24);
+}
+
+#colorDivGreen {
+	background-color: rgb(14, 209, 69);
+}
+
+#colorDivGray {
+	background-color: rgb(195, 195, 195);
+}
+
+#colorDivBlack {
+	background-color: rgb(0, 0, 0);
+}
+
+#radioColorPickDiv {
+	height: 22px;
+	width: 22px;
+	border-radius: 100%;
+	background-color: white;
+	position: absolute;
+	left: 90%;
+	bottom: 0%;
+}
+
+#radioColorPickInput {
+	height: 22px;
+	width: 22px;
+	border: none;
+	border-radius: 100%;
+	opacity: 0;
+	position: relative;
+	left: 5%;
+}
+
+#textareaInput {
+	resize: none;
+	width: 500px;
+	height: 75px;
+	border-radius: 5px;
+	border: none;
+}
+
+#radioActivityElseInput {
+	margin-left: 15px;
+	width: 40%;
+}
+
+.textInput {
+	border-radius: 5px;
+	border: none;
+}
+
+.wrapperContainerRateColumn {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin-top: 2%;
+	margin-bottom: 50px;
+}
+
+.labelMood {
+	position: relative;
+	bottom: 3px;
+	left: 2px;
+}
+
+.labelTextEntry {
+	position: relative;
+	left: 5px;
+}
+
+#mainRateDivFormularSubmit {
+	display: flex;
+	justify-content: center;
+	margin-top: 2%;
+	margin-bottom: 50px;
+}
+
+#mainRateFormularSubmit {
+	width: 8%;
+	height: 40px;
+	border-radius: 15px;
+	border: none;
+	font-size: 20px;
+}
+
+/* Impressum */
+
+#imprintFlexContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#imprintContainer {
+	width: 75%;
+	margin-top: 75px;
+}
+
+.imprintUl {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+.imprintHr {
+	margin: 1.8% 0;
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/styles_rate.css" />
+		<script src="scripts/scripts_rate.js" defer></script>
+		<title>Moodiy | Rate</title>
+		<link rel="icon" href="images/logo_round.png" type="image/png" />
+	</head>
+	<body>
+		<header>
+			<a href="index.html"
+				><img src="images/logo_round.png" alt="Logo Moodiy" height="120px" id="logoHeader"
+			/></a>
+		</header>
+		<nav>
+			<div id="toggleArea">☰ Menü</div>
+			<div id="menu">
+				<p class="menuPoint"><a href="index.html" class="linkDesign">Home</a></p>
+				<p class="menuPoint"><a href="" class="linkDesign">Übersicht</a></p>
+			</div>
+		</nav>
+		<main id="mainRate">
+			<div id="mainRateDiv">
+				<h1>📓 Trage hier täglich deine Gefühle, Emotionen und Gedanken ein</h1>
+				<div id="mainRateDivInfo">
+					<p id="mainRateInfo">
+						Je regelmäßiger du deine Emotionen festhältst, desto genauer entsteht ein persönliches Bild
+						deiner Gefühlswelt. So kann Moodiy dir helfen, Muster zu erkennen und Entwicklungen besser
+						nachzuvollziehen.
+					</p>
+				</div>
+			</div>
+		</main>
+		<form>
+			<div class="mainRateDivFormular">
+				<h3>Welche dieser Farben beschreibt deine Emotionen gerade am besten?</h3>
+				<div class="wrapperContainerRate">
+					<div class="colorContainer">
+						<input type="radio" name="colorPick" id="radioColorPink" />
+						<label for="radioColorPink">Rosa</label>
+						<div class="colorPickDiv" id="colorDivPink"></div>
+					</div>
+					<div class="colorContainer">
+						<input type="radio" name="colorPick" id="radioColorViolet" />
+						<label for="radioColorViolet">Violett</label>
+						<div class="colorPickDiv" id="colorDivViolet"></div>
+					</div>
+					<div class="colorContainer">
+						<input type="radio" name="colorPick" id="radioColorYellow" />
+						<label for="radioColorYellow">Gelb</label>
+						<div class="colorPickDiv" id="colorDivYellow"></div>
+					</div>
+					<div class="colorContainer">
+						<input type="radio" name="colorPick" id="radioColorGreen" />
+						<label for="radioColorGreen">Grün</label>
+						<div class="colorPickDiv" id="colorDivGreen"></div>
+					</div>
+					<div class="colorContainer">
+						<input type="radio" name="colorPick" id="radioColorGray" />
+						<label for="radioColorGray">Grau</label>
+						<div class="colorPickDiv" id="colorDivGray"></div>
+					</div>
+					<div class="colorContainer">
+						<input type="radio" name="colorPick" id="radioColorBlack" />
+						<label for="radioColorBlack">Schwarz</label>
+						<div class="colorPickDiv" id="colorDivBlack"></div>
+					</div>
+					<div class="colorContainer">
+						<input type="radio" name="colorPick" id="radioColorPick" />
+						<label for="radioColorPick">Andere Farbe</label>
+						<div id="radioColorPickDiv"></div>
+						<input type="color" id="radioColorPickInput" />
+					</div>
+				</div>
+			</div>
+			<div class="mainRateDivFormular">
+				<h3>Welche Emotionen fühlst du gerade?</h3>
+				<div class="wrapperContainerRate">
+					<div>
+						<input
+							type="checkbox"
+							name="emotionPick"
+							class="checkboxEmotionUncheck"
+							id="checkboxEmotionHappy"
+							onclick="rateCheckboxEmotionAny()"
+						/>
+						<label for="checkboxEmotionHappy">Glücklich</label>
+					</div>
+					<div>
+						<input
+							type="checkbox"
+							name="emotionPick"
+							class="checkboxEmotionUncheck"
+							id="checkboxEmotionSatisfied"
+							onclick="rateCheckboxEmotionAny()"
+						/>
+						<label for="checkboxEmotionSatisfied">Zufrieden</label>
+					</div>
+					<div>
+						<input
+							type="checkbox"
+							name="emotionPick"
+							class="checkboxEmotionUncheck"
+							id="checkboxEmotionSad"
+							onclick="rateCheckboxEmotionAny()"
+						/>
+						<label for="checkboxEmotionSad">Traurig</label>
+					</div>
+					<div>
+						<input
+							type="checkbox"
+							name="emotionPick"
+							class="checkboxEmotionUncheck"
+							id="checkboxEmotionAngry"
+							onclick="rateCheckboxEmotionAny()"
+						/>
+						<label for="checkboxEmotionAngry">Wütend</label>
+					</div>
+					<div>
+						<input
+							type="checkbox"
+							name="emotionPick"
+							class="checkboxEmotionUncheck"
+							id="checkboxEmotionAnxious"
+							onclick="rateCheckboxEmotionAny()"
+						/>
+						<label for="checkboxEmotionAnxious">Ängstlich</label>
+					</div>
+					<div>
+						<input
+							type="checkbox"
+							name="emotionPick"
+							class="checkboxEmotionUncheck"
+							id="checkboxEmotionBurdened"
+							onclick="rateCheckboxEmotionAny()"
+						/>
+						<label for="checkboxEmotionBurdened">Belastet</label>
+					</div>
+					<div>
+						<input
+							type="checkbox"
+							name="emotionPick"
+							class="checkboxEmotionUncheck"
+							id="checkboxEmotionThoughtful"
+							onclick="rateCheckboxEmotionAny()"
+						/>
+						<label for="checkboxEmotionThoughtful">Nachdenklich</label>
+					</div>
+					<div>
+						<input
+							type="checkbox"
+							name="emotionPick"
+							id="checkboxEmotionNone"
+							onclick="rateCheckboxEmotionNone()"
+						/>
+						<label for="checkboxEmotionNone">Keins davon</label>
+					</div>
+				</div>
+			</div>
+			<div class="mainRateDivFormular">
+				<h3>Welche Zahl von 1 bis 10 beschreibt am besten, wie es dir gerade geht?</h3>
+				<div class="wrapperContainerRate">
+					<div>
+						<input type="radio" name="numberPick" id="radioNumberOne" />
+						<label for="radioNumberOne">1</label>
+					</div>
+					<div>
+						<input type="radio" name="numberPick" id="radioNumberTwo" />
+						<label for="radioNumberTwo">2</label>
+					</div>
+					<div>
+						<input type="radio" name="numberPick" id="radioNumberThree" />
+						<label for="radioNumberThree">3</label>
+					</div>
+					<div>
+						<input type="radio" name="numberPick" id="radioNumberFour" />
+						<label for="radioNumberFour">4</label>
+					</div>
+					<div>
+						<input type="radio" name="numberPick" id="radioNumberFive" />
+						<label for="radioNumberFive">5</label>
+					</div>
+					<div>
+						<input type="radio" name="numberPick" id="radioNumberSix" />
+						<label for="radioNumberSix">6</label>
+					</div>
+					<div>
+						<input type="radio" name="numberPick" id="radioNumberSeven" />
+						<label for="radioNumberSeven">7</label>
+					</div>
+					<div>
+						<input type="radio" name="numberPick" id="radioNumberEight" />
+						<label for="radioNumberEight">8</label>
+					</div>
+					<div>
+						<input type="radio" name="numberPick" id="radioNumberNine" />
+						<label for="radioNumberNine">9</label>
+					</div>
+					<div>
+						<input type="radio" name="numberPick" id="radioNumberTen" />
+						<label for="radioNumberTen">10</label>
+					</div>
+				</div>
+			</div>
+			<div class="mainRateDivFormular">
+				<h3>Ist es möglich, kurz aufzuschreiben, wie es dir im Moment geht?</h3>
+				<div class="wrapperContainerRate">
+					<textarea id="textareaInput" maxlength="800" placeholder="Heute fühle ich mich..."></textarea>
+				</div>
+			</div>
+			<div class="mainRateDivFormular">
+				<h3>Welche Aktivität unternimmst du gerade?</h3>
+				<div class="wrapperContainerRate">
+					<div>
+						<input type="radio" name="activityPick" id="radioActivityRelax" />
+						<label for="radioActivityRelax">Enspannen</label>
+					</div>
+					<div>
+						<input type="radio" name="activityPick" id="radioActivityWork" />
+						<label for="radioActivityWork">Arbeiten</label>
+					</div>
+					<div>
+						<input type="radio" name="activityPick" id="radioActivityLearn" />
+						<label for="radioActivityLearn">Lernen</label>
+					</div>
+					<div>
+						<input type="radio" name="activityPick" id="radioActivitySport" />
+						<label for="radioActivitySport">Sport</label>
+					</div>
+					<div>
+						<input type="radio" name="activityPick" id="radioActivityMusic" />
+						<label for="radioActivityMusic">Musik hören</label>
+					</div>
+					<div>
+						<input type="radio" name="activityPick" id="radioActivityOutside" />
+						<label for="radioActivityOutside">Draußen</label>
+					</div>
+					<div>
+						<input type="radio" name="activityPick" id="radioActivityElse" />
+						<label for="radioActivityElse">Anderes</label>
+						<input type="text" id="radioActivityElseInput" class="textInput" maxlength="35" />
+					</div>
+				</div>
+			</div>
+			<div class="mainRateDivFormular">
+				<h3>Wie ist deine Stimmung gerade?</h3>
+				<div class="wrapperContainerRateColumn">
+					<div>
+						<input type="range" id="rangeMoodEnergy" min="1" max="10" step="1" value="1" />
+						<input type="checkbox" id="rangeMoodEnergyCheckbox" />
+						<label for="rangeMoodEnergy" class="labelMood">Energie</label>
+					</div>
+					<div>
+						<input type="range" id="rangeMoodStress" min="1" max="10" step="1" value="1" />
+						<input type="checkbox" id="rangeMoodStressCheckbox" />
+						<label for="rangeMoodStress" class="labelMood">Stess</label>
+					</div>
+					<div>
+						<input type="range" id="rangeMoodMotivation" min="1" max="10" step="1" value="1" />
+						<input type="checkbox" id="rangeMoodMotivationCheckbox" />
+						<label for="rangeMoodMotivation" class="labelMood">Motivation</label>
+					</div>
+				</div>
+			</div>
+			<div class="mainRateDivFormular">
+				<h3>Möchtest du etwas besonderes aufschreiben?</h3>
+				<div class="wrapperContainerRateColumn">
+					<div>
+						<input type="text" id="textEntryToday" class="textInput" maxlength="75" />
+						<label for="textEntryToday" class="labelTextEntry">Was hat dir heute gutgetan?</label>
+					</div>
+					<div>
+						<input type="text" id="textEntryThoughts" class="textInput" maxlength="75" />
+						<label for="textEntryThoughts" class="labelTextEntry">Was beschäftigt dich gerade?</label>
+					</div>
+					<div>
+						<input type="text" id="textEntryFocus" class="textInput" maxlength="75" />
+						<label for="textEntryFocus" class="labelTextEntry">Welche Ziele hast du gerade?</label>
+					</div>
+				</div>
+			</div>
+			<div id="mainRateDivFormularSubmit">
+				<button type="button" id="mainRateFormularSubmit">Absenden</button>
+			</div>
+		</form>
+		<footer>
+			<a href="imprint.html" class="linkDesign" id="linkDesignImprint">Impressum</a>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+html {
+	scrollbar-gutter: stable;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: rgb(51, 51, 51);
+	color: rgb(255, 255, 255);
+	font-family: Cambria;
+}
+
+header {
+	position: fixed;
+}
+
+#logoHeader {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+/* Impressum */
+
+#imprintFlexContainer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#imprintContainer {
+	width: 75%;
+	margin-top: 75px;
+}
+
+.imprintUl {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+.imprintHr {
+	margin: 1.8% 0;
+}
