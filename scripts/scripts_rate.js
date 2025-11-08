@@ -48,8 +48,6 @@ const emotionPickOptions = [
 	document.getElementById("checkboxEmotionNone"),
 ];
 
-const emotionPickOptionValue = [];
-
 const numberPickOptions = [
 	document.getElementById("radioNumberOne"),
 	document.getElementById("radioNumberTwo"),
@@ -73,112 +71,78 @@ const activityPickOptions = [
 	document.getElementById("radioActivityElse"),
 ];
 
-const requiredPickOption = [colorPickOptions, numberPickOptions, activityPickOptions];
-
-const requiredPickOptionValue = [[], [], []];
-
-const optionalInputs = [
+const optionalInputFields = [
 	document.getElementById("textareaInput"),
 	document.getElementById("textEntryToday"),
 	document.getElementById("textEntryThoughts"),
 	document.getElementById("textEntryFocus"),
 ];
 
-const optionalInputsValue = [];
-
-const optionalInputsCheckbox = [
+const optionalInputCheckboxes = [
 	document.getElementById("rangeMoodEnergyCheckbox"),
 	document.getElementById("rangeMoodStressCheckbox"),
 	document.getElementById("rangeMoodMotivationCheckbox"),
 ];
 
-const optionalInputsCheckboxRange = [
+const optionalInputCheckboxRanges = [
 	document.getElementById("rangeMoodEnergy"),
 	document.getElementById("rangeMoodStress"),
 	document.getElementById("rangeMoodMotivation"),
 ];
 
-const optionalInputsCheckboxValue = [];
-
-const rateFormularSubmit = document.getElementById("mainRateFormularSubmit");
-
-rateFormularSubmit.addEventListener("click", () => {
+document.getElementById("mainRateFormularSubmit").addEventListener("click", () => {
 	function anyChecked(pickOption) {
 		for (let i = 0; i < pickOption.length; i++) {
 			if (pickOption[i].checked) {
 				if (pickOption[i] == document.getElementById("radioActivityElse")) {
 					if (document.getElementById("radioActivityElseInput").value.trim() !== "") {
-						return true;
-					}
-				} else {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
-
-	function safeInput(requiredPickInputOption) {
-		for (let i = 0; i < requiredPickInputOption.length; i++) {
-			for (let a = 0; a < requiredPickInputOption[i].length; a++) {
-				if (requiredPickInputOption[i][a].checked) {
-					if (i === 0 && a === 6) {
-						requiredPickOptionValue[i][a] = document.getElementById("radioColorPickInput").value;
-					} else if (i === 2 && a === 6) {
-						requiredPickOptionValue[i][a] = document.getElementById("radioActivityElseInput").value;
+						return document.getElementById("radioActivityElseInput").value.trim();
 					} else {
-						requiredPickOptionValue[i][a] = true;
+						return false;
 					}
+				} else if (pickOption[i] == document.getElementById("radioColorPick")) {
+					return document.getElementById("radioColorPickInput").value;
 				} else {
-					requiredPickOptionValue[i][a] = false;
+					return i;
 				}
 			}
 		}
-		return requiredPickOptionValue;
 	}
 
-	function safeMultipleInput(requiredMultiplePickInputOption) {
-		for (let i = 0; i < requiredMultiplePickInputOption.length; i++) {
-			if (requiredMultiplePickInputOption[i].checked) {
-				emotionPickOptionValue[i] = true;
-			} else {
-				emotionPickOptionValue[i] = false;
+	function multipleChecked(multiplePickOption) {
+		let pickedEmotions = "";
+		for (let i = 0; i < multiplePickOption.length; i++) {
+			if (multiplePickOption[i].checked) {
+				pickedEmotions = pickedEmotions + "" + i;
 			}
 		}
-		return emotionPickOptionValue;
+		if (pickedEmotions !== "") {
+			Number(pickedEmotions);
+			return pickedEmotions;
+		} else {
+			return;
+		}
 	}
 
-	function safeOptionalInput(optionalInput) {
-		for (let i = 0; i < optionalInput.length; i++) {
-			if (optionalInput[i].value !== "") {
-				optionalInputsValue[i] = optionalInput[i].value;
+	function optionalRangeInput(optionalInputs) {
+		let rangeInputFields = "";
+		for (i = 0; i < optionalInputs.length; i++) {
+			if (optionalInputs[i].checked === true) {
+				rangeInputFields = rangeInputFields + "" + optionalInputCheckboxRanges[i].value;
 			} else {
-				optionalInputsValue[i] = false;
+				rangeInputFields = rangeInputFields + "e";
 			}
 		}
-		return optionalInputsValue;
-	}
-
-	function safeOptionalCheckedInput(optionalInputCheckbox) {
-		for (let i = 0; i < optionalInputCheckbox.length; i++) {
-			if (optionalInputCheckbox[i].checked) {
-				optionalInputsCheckboxValue[i] = optionalInputsCheckboxRange[i].value;
-			} else {
-				optionalInputsCheckboxValue[i] = false;
-			}
-		}
-		return optionalInputsCheckboxValue;
+		return rangeInputFields;
 	}
 
 	const colorPickSelected = anyChecked(colorPickOptions);
-	const emotionPickSelected = anyChecked(emotionPickOptions);
 	const numberPickSelected = anyChecked(numberPickOptions);
 	const activityPickSelected = anyChecked(activityPickOptions);
-
-	if (colorPickSelected && emotionPickSelected && numberPickSelected && activityPickSelected) {
-		const safedPickInput = safeInput(requiredPickOption);
-		const safedMultiplePickInput = safeMultipleInput(emotionPickOptions);
-		const safedOptionalInput = safeOptionalInput(optionalInputs);
-		const safedOptionalInputCheckbox = safeOptionalCheckedInput(optionalInputsCheckbox);
-	}
+	const emotionPickSelected = multipleChecked(emotionPickOptions);
+	const optionalTextareaInput = document.getElementById("textareaInput").value;
+	const optionalTodayTextInput = document.getElementById("textEntryToday").value;
+	const optionalToughtsTextInput = document.getElementById("textEntryThoughts").value;
+	const optionalFocusTextInput = document.getElementById("textEntryFocus").value;
+	const optionalRangeSelected = optionalRangeInput(optionalInputCheckboxes);
 });
