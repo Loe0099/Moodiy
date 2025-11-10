@@ -140,9 +140,31 @@ document.getElementById("mainRateFormularSubmit").addEventListener("click", () =
 	const numberPickSelected = anyChecked(numberPickOptions);
 	const activityPickSelected = anyChecked(activityPickOptions);
 	const emotionPickSelected = multipleChecked(emotionPickOptions);
-	const optionalTextareaInput = document.getElementById("textareaInput").value;
-	const optionalTodayTextInput = document.getElementById("textEntryToday").value;
-	const optionalToughtsTextInput = document.getElementById("textEntryThoughts").value;
-	const optionalFocusTextInput = document.getElementById("textEntryFocus").value;
-	const optionalRangeSelected = optionalRangeInput(optionalInputCheckboxes);
+
+	if (
+		colorPickSelected !== undefined &&
+		numberPickSelected !== undefined &&
+		activityPickSelected !== undefined &&
+		activityPickSelected !== false &&
+		emotionPickSelected !== undefined
+	) {
+		const optionalTextareaInput = document.getElementById("textareaInput").value;
+		const optionalTodayTextInput = document.getElementById("textEntryToday").value;
+		const optionalToughtsTextInput = document.getElementById("textEntryThoughts").value;
+		const optionalFocusTextInput = document.getElementById("textEntryFocus").value;
+		const optionalRangeSelected = optionalRangeInput(optionalInputCheckboxes);
+
+		const currentTime = new Date();
+		const currentDate = `${currentTime.getDate()}.${currentTime.getMonth()}.${currentTime.getFullYear()} - ${currentTime.getHours()}:${currentTime.getMinutes()}:${currentTime.getSeconds()}`;
+
+		localStorage.setItem(`${currentDate} – Color:`, colorPickSelected);
+		localStorage.setItem(`${currentDate} – Number:`, numberPickSelected);
+		localStorage.setItem(`${currentDate} – Activity:`, activityPickSelected);
+		localStorage.setItem(`${currentDate} – Emotion:`, emotionPickSelected);
+		localStorage.setItem(`${currentDate} – Textarea:`, optionalTextareaInput);
+		localStorage.setItem(`${currentDate} – TodayText:`, optionalTodayTextInput);
+		localStorage.setItem(`${currentDate} – Toughts Text:`, optionalToughtsTextInput);
+		localStorage.setItem(`${currentDate} – Focus Text:`, optionalFocusTextInput);
+		localStorage.setItem(`${currentDate} – Range:`, optionalRangeSelected);
+	}
 });
