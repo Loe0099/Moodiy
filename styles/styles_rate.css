@@ -53,6 +53,10 @@ nav {
 	pointer-events: auto;
 }
 
+p {
+	font-family: Arial;
+}
+
 .menuPoint {
 	font-size: 14px;
 }

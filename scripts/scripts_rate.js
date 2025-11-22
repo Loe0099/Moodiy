@@ -153,18 +153,5 @@ document.getElementById("mainRateFormularSubmit").addEventListener("click", () =
 		const optionalToughtsTextInput = document.getElementById("textEntryThoughts").value;
 		const optionalFocusTextInput = document.getElementById("textEntryFocus").value;
 		const optionalRangeSelected = optionalRangeInput(optionalInputCheckboxes);
-
-		const currentTime = new Date();
-		const currentDate = `${currentTime.getDate()}.${currentTime.getMonth()}.${currentTime.getFullYear()} - ${currentTime.getHours()}:${currentTime.getMinutes()}:${currentTime.getSeconds()}`;
-
-		localStorage.setItem(`${currentDate} – Color:`, colorPickSelected);
-		localStorage.setItem(`${currentDate} – Number:`, numberPickSelected);
-		localStorage.setItem(`${currentDate} – Activity:`, activityPickSelected);
-		localStorage.setItem(`${currentDate} – Emotion:`, emotionPickSelected);
-		localStorage.setItem(`${currentDate} – Textarea:`, optionalTextareaInput);
-		localStorage.setItem(`${currentDate} – TodayText:`, optionalTodayTextInput);
-		localStorage.setItem(`${currentDate} – Toughts Text:`, optionalToughtsTextInput);
-		localStorage.setItem(`${currentDate} – Focus Text:`, optionalFocusTextInput);
-		localStorage.setItem(`${currentDate} – Range:`, optionalRangeSelected);
 	}
 });
