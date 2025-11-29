@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/styles_register.css" />
+		<script src="scripts/scripts_register.js" defer></script>
+		<title>Moodiy | Registrieren</title>
+		<link rel="icon" href="images/logo_round.png" type="image/png" />
+	</head>
+	<body>
+		<header>
+			<a href="index.html"
+				><img src="images/logo_round.png" alt="Logo Moodiy" height="120px" id="logoHeader"
+			/></a>
+		</header>
+		<nav>
+			<div id="toggleArea">☰ Menü</div>
+			<div id="menu"></div>
+		</nav>
+		<main id="mainRegister">
+			<div id="mainRegisterDiv">
+				<form>
+					<div id="registerContainer">
+						<div class="registerButton">
+							<label for="emailButton">E-Mail:</label>
+							<input type="email" name="email" id="emailButton" placeholder="E-Mail eingeben" />
+						</div>
+						<div class="registerButton">
+							<label for="passwordButton">Passwort:</label>
+							<input
+								type="password"
+								name="passoword"
+								id="passwordButton"
+								placeholder="Paswort eingeben"
+							/>
+						</div>
+						<div class="registerButton">
+							<label for="passwordConfirmButton">Passwort bestätigen:</label>
+							<input
+								type="password"
+								name="passwordConfirm"
+								id="passwordConfirmButton"
+								placeholder="Passwort bestätigen"
+							/>
+						</div>
+					</div>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>
