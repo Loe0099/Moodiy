@@ -1,5 +1,5 @@
 /* Nur Übergangsweise */
-localStorage.setItem("signedUp", true);
+localStorage.setItem("signedUp", false);
 
 /* - Menu Leiste - */
 const toggleArea = document.getElementById("toggleArea");

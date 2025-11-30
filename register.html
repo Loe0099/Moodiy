@@ -10,43 +10,52 @@
 	</head>
 	<body>
 		<header>
-			<a href="index.html"
-				><img src="images/logo_round.png" alt="Logo Moodiy" height="120px" id="logoHeader"
-			/></a>
+			<a href="index.html">
+				<img src="images/logo_round.png" alt="Logo Moodiy" height="120px" id="logoHeader" />
+			</a>
 		</header>
 		<nav>
 			<div id="toggleArea">☰ Menü</div>
 			<div id="menu"></div>
 		</nav>
 		<main id="mainRegister">
-			<div id="mainRegisterDiv">
-				<form>
-					<div id="registerContainer">
-						<div class="registerButton">
-							<label for="emailButton">E-Mail:</label>
-							<input type="email" name="email" id="emailButton" placeholder="E-Mail eingeben" />
-						</div>
-						<div class="registerButton">
-							<label for="passwordButton">Passwort:</label>
-							<input
-								type="password"
-								name="passoword"
-								id="passwordButton"
-								placeholder="Paswort eingeben"
-							/>
-						</div>
-						<div class="registerButton">
-							<label for="passwordConfirmButton">Passwort bestätigen:</label>
-							<input
-								type="password"
-								name="passwordConfirm"
-								id="passwordConfirmButton"
-								placeholder="Passwort bestätigen"
-							/>
-						</div>
+			<form>
+				<div id="registerContainer">
+					<div class="registerButtonContainer">
+						<label for="emailButton">E-Mail:</label>
+						<input
+							type="email"
+							name="email"
+							class="registerButton"
+							id="emailRegisterButton"
+							placeholder="E-Mail eingeben"
+						/>
 					</div>
-				</form>
-			</div>
+					<div class="registerButtonContainer">
+						<label for="passwordButton">Passwort:</label>
+						<input
+							type="password"
+							name="password"
+							class="registerButton"
+							id="passwordRegisterButton"
+							placeholder="Paswort eingeben"
+						/>
+					</div>
+					<div class="registerButtonContainer">
+						<label for="passwordConfirmButton">Passwort bestätigen:</label>
+						<input
+							type="password"
+							name="passwordConfirm"
+							class="registerButton"
+							id="passwordConfirmRegisterButton"
+							placeholder="Passwort bestätigen"
+						/>
+					</div>
+					<div id="registerButtonSumbitContainer">
+						<button id="registerFormularSubmit">Absenden</button>
+					</div>
+				</div>
+			</form>
 		</main>
 	</body>
 </html>

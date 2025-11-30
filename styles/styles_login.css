@@ -94,16 +94,16 @@ footer {
 	font-size: 18px;
 }
 
-/* - Registieren - */
+/* - Login - */
 
-#mainRegister {
+#mainLogin {
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-#registerContainer {
+#loginContainer {
 	display: flex;
 	flex-direction: column;
 	gap: 25px;
@@ -112,28 +112,28 @@ footer {
 	border: 1px white solid;
 }
 
-.registerButtonContainer,
-#registerButtonSumbitContainer {
+.loginButtonContainer,
+#loginButtonSumbitContainer {
 	display: flex;
 	flex-direction: column;
 	gap: 2px;
 }
 
-#registerButtonSumbitContainer {
+#loginButtonSumbitContainer {
 	margin-top: 25px;
 }
 
-.registerButton,
-#registerFormularSubmit {
+.loginButton,
+#loginFormularSubmit {
 	border-radius: 7px;
 	border: none;
 	padding: 2px 8px;
 }
 
-.registerButton:focus {
+.loginButton:focus {
 	outline: none;
 }
 
-.registerButton::placeholder {
+.loginButton::placeholder {
 	color: rgb(40, 40, 40);
 }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/styles_login.css" />
+		<script src="scripts/scirpts_login.js" defer></script>
+		<title>Moodiy | Anmelden</title>
+		<link rel="icon" href="images/logo_round.png" type="image/png" />
+	</head>
+	<body>
+		<header>
+			<a href="index.html">
+				<img src="images/logo_round.png" alt="Logo Moodiy" height="120px" id="logoHeader" />
+			</a>
+		</header>
+		<nav>
+			<div id="toggleArea">☰ Menü</div>
+			<div id="menu"></div>
+		</nav>
+		<main id="mainLogin">
+			<form>
+				<div id="loginContainer">
+					<div class="loginButtonContainer">
+						<label for="emailLoginButton">E-Mail eingeben:</label>
+						<input
+							type="email"
+							name="email"
+							class="loginButton"
+							id="emailLoginButton"
+							placeholder="E-Mail eingeben"
+						/>
+					</div>
+					<div class="loginButtonContainer">
+						<label for="passwordLoginButton">Passwort eingeben:</label>
+						<input
+							type="password"
+							name="password"
+							class="loginButton"
+							id="passwordLoginButton"
+							placeholder="Passwort eingeben"
+						/>
+					</div>
+					<div id="loginButtonSumbitContainer">
+						<button id="loginFormularSubmit">Absenden</button>
+					</div>
+				</div>
+			</form>
+		</main>
+	</body>
+</html>

@@ -21,12 +21,11 @@ function addMenuPoint(text, link) {
 
 let signedUp = localStorage.getItem("signedUp");
 
+addMenuPoint("Home", "index.html");
 if (signedUp === "true") {
-	addMenuPoint("Home", "index.html");
 	addMenuPoint("Eintragen", "rate.html");
 	addMenuPoint("Übersicht", "overview.html");
 	addMenuPoint("Konto", "account.html");
 } else {
-	addMenuPoint("Registrieren", "register.html");
 	addMenuPoint("Anmelden", "login.html");
 }
