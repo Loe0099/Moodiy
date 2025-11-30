@@ -86,8 +86,10 @@ p {
 }
 
 footer {
-	text-align: center;
-	margin-bottom: 50px;
+	position: fixed;
+	top: 93.9%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 #linkDesignImprint {
